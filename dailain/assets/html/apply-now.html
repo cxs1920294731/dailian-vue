@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Apply Results</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+<header>
+    <div class="header-nav">
+        <span id="go-back" class="icon-arrow header-arrow-ad"></span>
+        <div class="title-header">
+            Influencer Apply
+        </div>
+        <div class="icon-box header-box-ad">
+            <span class="iocn-menu"></span>
+        </div>
+        <p class="search-validation">
+            <span class="arrow-red"></span>
+            <span>Please enter Product name</span>
+        </p>
+        <div class="header-menu row">
+            <span class="arrow-black"></span>
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <div class="icon-header icon-header-home">
+                        </div>
+                        <div>
+                            Home
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="product-list.html">
+                        <div class="icon-header icon-header-product">
+                        </div>
+                        <div>
+                            Products
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="my-account.html">
+                        <div class="icon-header icon-header-account">
+                        </div>
+                        <div>
+                            My Account
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://blog.taotronics.com/">
+                        <div class="icon-header icon-header-blog">
+                        </div>
+                        <div>
+                            Blog
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="support-list.html">
+                        <div class="icon-header icon-header-Support">
+                        </div>
+                        <div>
+                            Support
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+<div class="main-contain apply-now">
+    <form action="post" id="apply-now">
+        <h6 class="text-center channels-title">Please choose one of the channels</h6>
+        <div class="text-center">
+            <ul class="row slect-channels">
+                <li class="">
+                    <label>
+                        <input type="radio" name="channels" checked hidden>
+                        <span class="logo logo-youtube-apply"></span>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="radio" name="channels" hidden>
+                        <span class="logo logo-facebook-apply"></span>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="radio" name="channels" hidden>
+                        <span class="logo logo-blog-apply"></span>
+                    </label>
+
+                </li>
+                <li>
+                    <label>
+                        <input type="radio" name="channels" hidden>
+                        <span class="logo logo-apply-4"></span>
+                    </label>
+                </li>
+            </ul>
+        </div>
+        <ul class="enter-info">
+            <li>
+                <span class="inpur-name">First Name</span>
+                <input class="firstName" type="text" name="firstName" placeholder="First Name">
+            </li>
+            <li>
+                <span class="inpur-name">Last Name</span>
+                <input class="lastName" type="text" name="lastName" placeholder="Last Name">
+            </li>
+            <li>
+                <span class="inpur-name">Email address</span>
+                <input class="email" type="text" name="email" placeholder="Email address">
+            </li>
+            <li class="is-relative">
+                <span class="inpur-name">Country</span>
+                <div>
+                    <input class="country" type="text" name="country" placeholder="Country">
+                    <span class="arrow-black"></span>
+                </div>
+                <ul class="select-choice">
+                    <li>United States</li>
+                    <li>Japan</li>
+                    <li>Korea</li>
+                    <li>英国</li>
+                </ul>
+            </li>
+            <li class="enter-http">
+                <h6>Please enter yourTubBe channel Link <span class="is-red">*</span></h6>
+                <input class="link" type="text" name="link" placeholder="http://">
+            </li>
+        </ul>
+        <div class="choice-title">
+            <p >What's your interested topics and what can can do to help? <span class="is-red">*</span></p>
+            <p >（multiple choice）</p>
+        </div>
+        <ul class="select-topic row">
+            <li>
+                <label>
+                    <input type="checkbox" name="topic">
+                    <span>Tech & Electronics</span>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="checkbox" name="topic">
+                    <span>Beauty & Fashion</span>
+                </label>
+            </li>
+        </ul>
+        <ul class="select-topic row">
+            <li>
+                <label>
+                    <input type="checkbox" name="topic">
+                    <span>Sports & Outdoor</span>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="checkbox" name="topic">
+                    <span>Music Lifestyle </span>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="checkbox" name="topic">
+                    <span>Other </span>
+                </label>
+            </li>
+        </ul>
+        <div class="validation-code">
+            <img src="../images/code-img.png" alt="">
+        </div>
+        <div class="apply-intro">
+            <p>Taotronics values and respects your privacy.</p>
+            <p>Please read the <a href="https://www.taotronics.com/privacy-policy.html">Privacy Policy</a> for more information.</p>
+        </div>
+        <input type="button" class="btn-black text-center" value="Apply Now">
+    </form>
+</div>
+<script src="../js/public.js"></script>
+<script>
+    $(function () {
+        $('.apply-now .enter-info .arrow-black').click(function () {
+            var html =  $('.apply-now .enter-info .select-choice');
+            if (!html.hasClass('show')){
+                html.addClass('show');
+                html.animate({
+                    height:134
+                })
+            }else {
+                html.removeClass('show');
+                html.css({
+                    height:0
+                })
+            }
+        });
+        $('.apply-now .enter-info .select-choice li').click(function () {
+            var html =  $('.apply-now .enter-info .select-choice');
+            var input = $('.apply-now .enter-info  input.country');
+            var value = $(this).text();
+            input.val(value);
+            html.removeClass('show');
+            html.css({
+                height:0
+            })
+        })
+    })
+</script>
+<script>
+
+    $(function () {
+        //表单验证
+        function  init() {
+            $('.apply-now .enter-info li').removeClass('false');
+        }
+        var first_name_is = false,last_mame_is = false, email_is = false,  link_is = false,choci_is =false;
+        $('#apply-now .firstName').change(function () {
+            first_name_is = false;
+            var value = $('#apply-now .firstName').val();
+            console.log(value);
+            if (value==""){
+                $(this).parent('li').eq(0).addClass('false');
+            }
+            else {
+                first_name_is =true;
+            }
+        });
+        $('#apply-now .lastName').change(function () {
+            last_mame_is =false;
+            var value = $('#apply-now .lastName').val();
+            if (value==""){
+                $(this).parent('li').eq(0).addClass('false');
+            }else {
+                last_mame_is =true;
+            }
+        });
+        $('#apply-now .email').change(function () {
+            email_is =false;
+            var Regex =  /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+            var emial =$('#apply-now .email').val();
+            if (emial == ""||!Regex.test(emial)){
+                $(this).parent('li').eq(0).addClass('false');
+            }else {
+                email_is = true;
+            }
+        });
+        $('#apply-now .link').change(function () {
+            link_is =false;
+            var reg=/\/\/[\w\-_]+(\.[\w\-_]+)+([\w\-\.,@?^=%&:/~\+#]*[\w\-\@?^=%&/~\+#])?/;
+            var link =$('#apply-now .link').val();
+            if (link == ""||!Regex.test(link)){
+                $(this).parent('li').eq(0).addClass('false');
+            }else {
+                link_is = true;
+            }
+        });
+        $('#apply-now input[name="topic"]').change(function () {
+            var choice = [];
+            choci_is = false;
+            $('#apply-now input[name="topic"]:checked').each(function(){
+                chk_value.push($(this).val());
+            });
+            if (choice.length == 0){
+                $('.apply-now .choice-title').addClass('false');
+            }
+            else {
+                choci_is = true;
+            }
+        })
+        $('#apply-now').submit(function () {
+            init()
+            if(!first_name_is || !last_mame_is || !email_is || !link_is){
+                $('#apply-now .firstName').trigger('change');
+                $('#apply-now .lastName').trigger('change');
+                $('#apply-now .email').trigger('change');
+                $('#apply-now .link').trigger('change');
+                $('#apply-now input[name="topic"]').trigger('change');
+                return false;
+            }
+        })
+    })
+</script>
+</body>
+</html>

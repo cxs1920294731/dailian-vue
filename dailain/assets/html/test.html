@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>google验证码</title>
+    <meta charset="UTF-8">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+    <div class="g-recaptcha" data-callback="onCallback" data-sitekey="6LfLBTQUAAAAAIhjO66Ue2vll1QcAzAHEBw5_Pcf"></div>
+    <script>
+        var onCallback = function() {
+            alert("grecaptcha is ready!");
+        };
+    </script>
+</body>
+</html>
