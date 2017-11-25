@@ -2,57 +2,48 @@
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Our Company</title>
+    <title>代练宝</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="../css/style.css">
-    <script src="../js/jquery-3.1.1.min.js"></script>
+    <link rel="stylesheet" href="css/common.css">
 </head>
 <body>
-<header>
-    <div class="header-nav">
-        <span id="go-back" class="icon-arrow header-arrow-ad"></span>
-        <div class="title-header">
-            Our Company
-        </div>
-        <!--<div class="icon-box header-box-ad">-->
-        <!--<span class="icon-search icon-mar-r"></span>-->
-        <!--<span class="iocn-menu"></span>-->
-        <!--</div>-->
-    </div>
-</header>
-<div class="main-contain faq-rules about-us">
-    <p class="text">TaoTronics is a leading consumer electronics brand operating around the globe.
-        We specialize in small electronics and accessories. We pride ourselves on understanding what
-        consumers need and how to fulfill their demand. Since 2008, TaoTronics has enjoyed years of
-        continuous growth thanks to millions of satisfied customers around the world.</p>
-    <p class="text">At TaoTronics, We look into the latest innovations and find products that can connect with our daily
-        life; ideas that can make our routine tasks easier; technologies that truly enhance our activities.</p>
+<div class="hall">
+    <header class="nav-header-order set-user-info-header text-center">
+        <a class="go-back" id="go-back">
+            <i class="icon-arrow-left"></i>
+        </a>
+        <p>关于</p>
+    </header>
+    <div class="head-contain about-us">
+        <i class="img-box">
 
-
-    <h5 class="topic"><span class="pad-right">Authorized Brand Manager/ Retailer :</span> ZBT International Trading GmbH</h5>
-    <div class="row contact-style">
-        <div class='col-left row'>
-            <i class="icon-iphone"></i>
-            <p class="is-left">Call Us：04101-8189266(DE)</p>
-            <p class="float-right">Mon To Fri 9AM-5PM(CEST)</p>
-        </div>
-        <div class="col-right">
-            <i class="icon-addess"></i>
-            <p class="is-relative about-text">
-                <span class="about-text-name">A D D</span>
-                ：ZBT International Trading GmbH Halstenbeker Weg 98C 25462 Rellingen
-            </p>
-        </div>
+        </i>
+        <h5 class="text-center topic">代练宝</h5>
+        <p class="text">在代练市场混乱,低效,信任危机严重,我们想尽心做好带来你平台,为好的打手提供更编辑便捷,优质的服务,精心筛选好的商人提供价格更具有吸引力的订单,我们一直在努力,也感谢你的一路陪伴.</p>
     </div>
-    <p class="sup-icn">
-        <i class="pdf"></i>
-        <a href="https://www.taotronics.com/media/downloads/Amazon Brand Registry -TaoTronics -DE-V2.0.pdf" target="blank">Amazon Brand Registry -TaoTronics -DE-V2.0.pdf <i class="glyphicon glyphicon-save"></i></a>
-    </p>
-    <p class="sup-icn">
-        <i class="pdf"></i>
-        <a href="https://www.taotronics.com/media/downloads/EU-010531044 TAOTRONICS.PDF" target="blank" >EU-010531044 TAOTRONICS.pdf <i class="glyphicon glyphicon-save"></i></a>
-    </p>
+    <ul>
+        <li>Hello</li>
+        <li>Hello</li>
+        <li>Hello</li>
+    </ul>
+    <div class="attr ni"></div>
+    <div class="attr"></div>
+    <div class="attr ni"></div>
+    <div class="attr"></div>
+    <button id="onclick">点击</button>
 </div>
-<script src="../js/public.js"></script>
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/swiper-3.3.1.jquery.min.js"></script>
+<script src="js/layer.js"></script>
+<script>
+    $('body').on('click','#go-back', function () {
+        history.go(-1);
+    })
+    let JqDOM=$('div');
+    let dom= $('.attr');
+    $('#onclick').click(function () {
+        $('ul li').toggleClass('two');
+    });
+</script>
 </body>
 </html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>代练宝</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+<div class="hall">
+    <header class="nav-header-order set-user-info-header text-center">
+        <a class="go-back" id="go-back">
+            <i class="icon-arrow-left"></i>
+        </a>
+        <p>账单</p>
+    </header>
+    <div class="head-contain">
+        <div class="margin-bottom-10 index-card">
+            <ul class="receive-order">
+                <li>
+                    <a href="receive-order-details.html" class="is-relative order-box user">
+                        <span class="price user">-30</span>
+                        <h6 class="title">单双排白金3-钻石5（已有88胜点）</h6>
+                        <div class="is-relative">
+                            <p class="order-intro">
+                                <span>11月9日 15:06</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="is-relative order-box user">
+                        <span class="price user">+30</span>
+                        <h6 class="title">单双排白金3-钻石5（已有88胜点）</h6>
+                        <div class="is-relative">
+                            <p class="order-intro">
+                                <span>11月9日 15:06</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/swiper-3.3.1.jquery.min.js"></script>
+<script src="js/layer.js"></script>
+<script>
+    $('#go-back').click(function () {
+        history.go(-1);
+    })
+</script>
+</body>
+</html>

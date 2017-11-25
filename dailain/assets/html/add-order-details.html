@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>代练宝</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+<div class="hall">
+    <header class="nav-header-order text-center">
+        <a class="go-back" id="go-back">
+            <i class="icon-arrow-left"></i>
+        </a>
+        <p>英雄联盟</p>
+    </header>
+    <div class="order-detail">
+        <form>
+            <div class="margin-bottom-10 index-card">
+                <div class="title no-border">
+                    <i class="icon-order-title "></i>
+                    <span class="name">发单信息</span>
+                </div>
+                <ul class="order-content">
+                    <li class="add-order-li">
+                        <span class="name">订单标题:</span>
+                        <input class="input-text" type="text" name="title" placeholder="请在25个字内填写您的个性标题(必填)"></textarea>
+                    </li>
+                    <li class="add-order-li">
+                        <span class="name">所在区服:</span>
+                        <input class="input-text" name="game-server" type="text" placeholder="请选择您所在的区服(必填)">
+                        <a class="select-game-serve">
+                            <i class="arrow-right"></i>
+                        </a>
+                    </li>
+                    <li class="add-order-li">
+                        <span class="name">游戏账号:</span>
+                        <input class="input-text" name="game-account" type="text" placeholder="请输入您的游戏账号(必填项)">
+                    </li>
+                    <li class="add-order-li">
+                        <span class="name">游戏密码:</span>
+                        <input class="input-text" name="game-password" type="password" placeholder="请输入您的游戏密码">
+                    </li>
+                    <li class="add-order-li">
+                        <span class="name">订单价格:</span>
+                        <input class="input-text" name="order-price" type="number" placeholder="请输入金额(必填项)">
+                        <i class="address-right">元</i>
+                    </li>
+                    <li class="add-order-li">
+                        <span class="name">安全保证金:</span>
+                        <input class="input-text" name="security deposit" type="number" placeholder="请输入金额(必填项)">
+                        <i class="address-right">元</i>
+                    </li>
+                    <li class="add-order-li">
+                        <span class="name">要求时间:</span>
+                        <input class="input-text" name="time" type="number" placeholder="要求时间(必填项)">
+                        <i class="address-right">小时</i>
+                    </li>
+                    <li class="add-order-li">
+                        <span class="name">号主手机:</span>
+                        <input class="input-text" name="phone" type="text" placeholder="请输入您的游戏角色名称(必填项)">
+                    </li>
+                    <li class="add-order-li">
+                        <span class="name textarea">游戏说明:</span>
+                        <textarea class="input-textarea" name="game-intro" placeholder="输入游戏说明(可不填，100字内)"></textarea>
+                    </li>
+                </ul>
+            </div>
+            <div class="margin-bottom-10 index-card">
+                <div class="ask-title">
+                    <i class="icon-order-title icon-1"></i>
+                    <span class="name">代练要求</span>
+                </div>
+                <div class="order-content-more">
+                    <textarea class="text-order" placeholder="请输入代练的具体要求"></textarea>
+                </div>
+            </div>
+        </form>
+    </div>
+    <footer class="nav-footer order-detail-footer">
+        <a class="btn-ok">确认发布</a>
+    </footer>
+</div>
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/swiper-3.3.1.jquery.min.js"></script>
+<script src="js/layer.js"></script>
+<script>
+    $('#go-back').click(function () {
+        history.go(-1);
+    })
+</script>
+</body>
+</html>

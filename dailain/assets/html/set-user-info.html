@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>代练宝</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+<div class="hall">
+    <header class="nav-header-order set-user-info-header text-center">
+        <a class="go-back" id="go-back">
+            <i class="icon-arrow-left"></i>
+        </a>
+        <p>联系电话</p>
+    </header>
+    <div class="head-contain">
+        <div class="set-user-info ">
+            <span class="name">所在区服:</span>
+            <input class="input-text" name="game-server" type="text" placeholder="123454">
+        </div>
+        <a class="btn-ok-set-info">确认</a>
+    </div>
+    <form action="/index/Regist" method="post">
+        <div>
+            <span>邮箱地址</span><input type="text" name="EmailName" placeholder="请输入发送邮箱名"/>
+        </div>
+        <div>
+            <span>标题</span><input name="EmailTopic" placeholder="请输入邮箱正文"></textarea>
+        </div>
+        <div>
+            <span>要发送邮箱的正文</span><textarea name="EmailText" placeholder="请输入邮箱正文"></textarea>
+        </div>
+        <input type="submit"  value=" 提交" />
+    </form>
+</div>
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/swiper-3.3.1.jquery.min.js"></script>
+<script src="js/layer.js"></script>
+<script>
+    $('#go-back').click(function () {
+        history.go(-1);
+    })
+</script>
+</body>
+</html>

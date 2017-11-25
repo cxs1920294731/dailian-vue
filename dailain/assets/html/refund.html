@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>代练宝</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+<div class="hall">
+    <header class="nav-header-order set-user-info-header text-center">
+        <a class="go-back" id="go-back">
+            <i class="icon-arrow-left"></i>
+        </a>
+        <p>退款</p>
+    </header>
+    <div class="head-contain">
+        <div class="set-user-info ">
+            <span class="name">退款原因:</span>
+            <textarea class="input-text" name="game-server" placeholder="123454"></textarea>
+        </div>
+        <div class="set-user-info ">
+            <span class="name">上传图片:</span>
+            <input class="input-text" name="game-server" type="text" placeholder="123454">
+        </div>
+        <a class="btn-ok-set-info">确认</a>
+    </div>
+</div>
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/swiper-3.3.1.jquery.min.js"></script>
+<script src="js/layer.js"></script>
+<script>
+    $('#go-back').click(function () {
+        history.go(-1);
+    })
+</script>
+</body>
+</html>

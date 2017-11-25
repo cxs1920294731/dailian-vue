@@ -16,8 +16,6 @@
     <script src="/assets/js/jquery-3.1.1.min.js"></script>
     <script src="/assets/js/jquery.validate.js"></script>
     <script src="/assets/js/jquery.raty.min.js"></script>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <script src="https://apis.google.com/js/api:client.js"></script>
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -35,15 +33,11 @@
     <!-- adhoc sdk end -->
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PP4GJP" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
     <div id="app">
         <transition  name="fade" mode="out-in">
             <router-view></router-view>
         </transition>
     </div>
-
 <script src="/assets/js/public.js"></script>
 </body>
 </html>

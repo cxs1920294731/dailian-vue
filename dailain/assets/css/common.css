@@ -1,0 +1,131 @@
+/*@import "../fonts/iconfont.css";*/
+@import "swiper.min.css";
+@import "style.css";
+/* ----Reset---- */
+html,body,div,dl,dt,dd,ol,ul,li,p,span,em,cite,del,a,img,
+h1,h2,h3,h4,h5,h6,object,pre,code,
+form,fieldset,legend,pre,select,textarea,blockquote,q,
+table,caption,thead,tbody,tfoot,th,td,button,input,textarea { margin:0;padding:0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body { font-family:"Microsoft YaHei","微软雅黑","黑体","宋体",Helvetica,Arial,Tahoma;font-size:12px;line-height: 1.4; color:#767676;overflow-y:scroll;}
+table { border-collapse:collapse; border-spacing:0;}
+img, fieldset, abbr, acronym { border:none;}
+a img { border:none; padding:0; margin:0;}
+a{text-decoration: none;color: #000;}
+ol,ul,li {list-style:none;}
+blockquote,q { quotes:none;}
+address,caption,cite,code,dfn,em,th,var { margin:0;padding:0;}
+header, footer, article, section, nav, menu, hgroup {display:block;margin:0;padding:0;}
+input:focus,textarea:focus{outline: none;}
+.fl { float:left;}
+.fr { float:right;}
+.clearfix:after {content:".";display:block;height:0;visibility:hidden;clear:both;}
+.clearfix { *zoom:1; }
+body{margin: 0;-webkit-tap-highlight-color:rgba(255,255,255,0);-webkit-appearance:none;background: #f8f8f8;}
+.body-w{background: #fff;}
+.song{font-style: normal;font-family: "宋体";}
+input,textarea{font-family:"Microsoft YaHei","微软雅黑","黑体","宋体",Helvetica,Arial,Tahoma;}
+/* ----End Reset---- */
+.hall .icon{
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.hall .icon-search{
+    width: 22px;
+    height: 22px;
+    background-image: url(../images/search-grey.png);
+}
+.hall .icon-footer{
+    margin: 0 auto;
+    width: 25px;
+    height: 25px;
+    margin-bottom: 1px;
+}
+.hall .icon-home{
+    background: url("../images/icon-home.png") no-repeat;
+    background-size: 100% 100%;
+}
+.hall .active .icon-home{
+    background: url("../images/icon-home-orange.png") no-repeat;
+    background-size: 100% 100%;
+}
+.hall .icon-list{
+    background: url("../images/icon-list.png") no-repeat;
+    background-size: 100% 100%;
+}
+.hall .active .icon-list{
+    background: url("../images/icon-list-orange.png") no-repeat;
+    background-size: 100% 100%;
+}
+.hall .icon-task{
+    background: url("../images/icon-add.png") no-repeat;
+    background-size: 100% 100%;
+}
+.hall .active .icon-task{
+    background: url("../images/icon-add-orange.png") no-repeat;
+    background-size: 100% 100%;
+}
+.hall .icon-shop{
+    background: url("../images/icon-shop.png") no-repeat;
+    background-size: 100% 100%;
+}
+.hall .active .icon-shop{
+    background: url("../images/icon-shop-orange.png") no-repeat;
+    background-size: 100% 100%;
+}
+.hall  .icon-user{
+    background: url("../images/icon-user.png") no-repeat;
+    background-size: 100% 100%;
+}
+.hall .active .icon-user{
+    background: url("../images/icon-user-orange.png") no-repeat;
+    background-size: 100% 100%;
+}
+.hall .margin-bottom-10{
+    margin-bottom: 10px;
+}
+.hall .index-card{
+    padding: 10px 12px 10px 12px;
+    background-color: #ffffff;
+}
+.hall input, textarea,.hall select,.hall button {
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    margin: 0em;
+    -webkit-appearance: none;
+    border: 0;
+    font: 400 13.3333px Arial;
+}
+.row:before, .row:after {
+    content: " ";
+    display: table;
+}
+.row:after {
+    clear: both;
+}
+.is-relative{
+    position: relative;
+}
+.text-center{
+    text-align: center;
+}
+.hall .is-orange{
+    color: #ff6900;
+}
+.hall .no-border{
+}
+.hall .text-right{
+    text-align: right;
+}
