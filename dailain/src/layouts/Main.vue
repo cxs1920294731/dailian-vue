@@ -1,54 +1,32 @@
 <template>
-    <div class="main">
-        <slot></slot>
-        <span class="btn-to-top" @click="toTop"></span>
-        <footer>
-            <ul class="foot-nav">
-                <li>
-                    <router-link :to="{name: 'index'}">
-                        <i class="icon-foot icon-foot-home"></i>
-                        <p>Home</p>
-                    </router-link>
-                </li>
-                <li>
-                    <router-link :to="{name: 'product'}">
-                        <i class="icon-foot icon-foot-products"></i>
-                        <p>Products</p>
-                    </router-link>
-                </li>
-                <li>
-                    <a v-if="isShow&&isloginPage" class="people" href="https://customer.sunvalleytek.com/account/welcome">
-                        <i class="img-box">
-                            <img src="/assets/images/people-img.png" alt="">
-                        </i>
-                        <p>My Account</p>
-                    </a>
-                    <router-link v-if="!isShow"  :to="{name: 'user'}">
-                        <i class="icon-foot icon-foot-myaccount"></i>
-                        <p>My Account</p>
-                    </router-link>
-                    <a v-if="isShow&&!isloginPage" class="people-login" href="https://customer.sunvalleytek.com/account/welcome">
-                        <i class="img-box">
-                            <img src="/assets/images/people-img.png" alt="">
-                        </i>
-                        <p>My Account</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="http://blog.taotronics.com/">
-                        <i class="icon-foot icon-foot-blog"></i>
-                        <p>Blog</p>
-                    </a>
-                </li>
-                <li>
-                    <router-link :to="{name: 'support'}">
-                        <i class="icon-foot icon-foot-support"></i>
-                        <p>Support</p>
-                    </router-link>
-                </li>
-            </ul>
-        </footer>
-    </div>
+   <div class="hall">
+       <slot></slot>
+       <footer class="nav-footer">
+           <ul class="row text-center">
+               <li class="active"><a href="index.html">
+                   <i class="icon icon-footer icon-home"></i>
+                   <p>主页</p>
+               </a></li>
+               <li><a href="product-list.html">
+                   <i class="icon icon-footer icon-list"></i>
+                   <p>大厅</p>
+               </a></li>
+               <li><a href="add-order.html">
+                   <i class="icon icon-footer icon-task"></i>
+                   <p>发需求</p>
+               </a></li>
+               <li><a href="shop.html">
+                   <i class="icon icon-footer icon-shop"></i>
+                   <p>旺铺</p>
+               </a></li>
+               <li><a href="user.html">
+                   <i class="icon icon-footer icon-user"></i>
+                   <p>我的</p>
+               </a></li>
+           </ul>
+       </footer>
+   </div>
+
 </template>
 
 <script>
@@ -56,26 +34,14 @@
     export default {
         data () {
             return {
-                isShow:false,
-                isloginPage:false
             }
         },
         mounted: function (){
-            var self = this;
-            if (Util.getSession('login') == 'true'){
-                self.isShow = true;
-            }
-            if(self.$route.path =='/user'){
-                self.isloginPage = true
-            }
+
         },
         props: [],
         methods: {
-            toTop: function(){
-                $('html,body').animate({
-                    scrollTop:'0px'
-                })
-            }
+
         },
         components: {}
     }

@@ -1,206 +1,294 @@
 <template>
     <main-layout>
-        <header>
-            <div class="header-nav index-nav">
-                <a href="javascript:" class="header-arrow-ad" @click="reload">
-                    <span  class="logo-index "></span>
-                </a>
-                <div class="search-box">
-                    <input type="text" @keyup.13="search" name="serch" placeholder="Please enter product name" v-model="searchInput" maxlength="500">
-                    <a class="icon-search-box" @click="search">
-                        <span class="icon-search-red"></span>
+        <div class="hall">
+            <header class="nav-header">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="" alt="">
                     </a>
-                    <p class="search-validation">
-                        <span class="arrow-red"></span>
-                        <span>Please enter a product name</span>
-                    </p>
                 </div>
-                <div v-if="!login" class="index-right"><router-link :to="{name: 'login'}">Log In</router-link></div>
-            </div>
-        </header>
-        <div class="main-contain index">
-            <div class="ad-top">
-                <div class="swiper-container swiper-index">
+                <div class="search-box">
+                    <a href="search.html" class="search-link">
+                        <i class="icon icon-search"></i>
+                        <span>订单号/标题/游戏名</span>
+                    </a>
+                </div>
+            </header>
+            <div class="index-main">
+                <div class="swiper-container margin-bottom-10">
                     <ul class="swiper-wrapper">
-                        <li class="swiper-slide" v-for="item in carouselList">
-                            <a :href="item.bannerUrl" class="a">
-                                <div class="bg-img-box">
-                                    <img :src="item.smalImgUrl" :alt="item.bannerTitle">
+                        <li class="swiper-slide">
+                            <i class="swiper-img-box">
+                                <img src="assets/images/inder-banner.png" alt="">
+                            </i>
+                        </li>
+                        <li class="swiper-slide">
+                            <i class="swiper-img-box">
+                                <img src="assets/images/index-banner-2.jpg" alt="">
+                            </i>
+                        </li>
+                    </ul>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="margin-bottom-10 index-card">
+                    <div class="title text-center">
+                        <span class="line"></span>
+                        <span class="padding-l-r">发布需求</span>
+                        <span class="line"></span>
+                        <p class="intro">显示123456人已成功解决问需求</p>
+                    </div>
+                    <div class="form-box-index">
+                        <div class="form-select" id="selct-game">
+                            <p class="game">选择您要发布的游戏</p>
+                            <i class="icon icon-down-arrow"></i>
+                        </div>
+                        <textarea class="form-textarea" placeholder="请用一句话简要描述您的需求"></textarea>
+                        <div class="row form-task">
+                            <input type="number" name="weixin" class="weixin" placeholder="请输入微信或qq">
+                            <input type="button" class="button btn-orange" value="发布需求">
+                        </div>
+                    </div>
+                </div>
+                <div class="margin-bottom-10 index-card">
+                    <div class="title text-center">
+                        <span class="line"></span>
+                        <span class="padding-l-r">火爆订单</span>
+                        <span class="line"></span>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="order-details.html" class="is-relative order-box">
+                                <i class="icon-order-index"></i>
+                                <h6 class="title">单双排白金3-钻石5（已有88胜点）</h6>
+                                <div class="is-relative">
+                                    <span class="price">¥44.00</span>
+                                    <p class="order-intro">
+                                        <span>所在区服：</span>
+                                        <span>英雄联盟/电信/黑色玫瑰</span>
+                                    </p>
+                                    <p class="order-intro">
+                                        <span>发布者</span>
+                                        <span>帅者无敌</span>
+                                    </p>
+                                    <div class="order-text">
+                                        <span>保证金：80元</span>
+                                        <span>时长：55小时</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="order-details.html" class="is-relative order-box">
+                                <i class="icon-order-index"></i>
+                                <h6 class="title">单双排白金3-钻石5（已有88胜点）</h6>
+                                <div class="is-relative">
+                                    <span class="price">¥44.00</span>
+                                    <p class="order-intro">
+                                        <span>所在区服：</span>
+                                        <span>英雄联盟/电信/黑色玫瑰</span>
+                                    </p>
+                                    <p class="order-intro">
+                                        <span>发布者</span>
+                                        <span>帅者无敌</span>
+                                    </p>
+                                    <div class="order-text">
+                                        <span>保证金：80元</span>
+                                        <span>时长：55小时</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="order-details.html" class="is-relative order-box">
+                                <i class="icon-order-index"></i>
+                                <h6 class="title">单双排白金3-钻石5（已有88胜点）</h6>
+                                <div class="is-relative">
+                                    <span class="price">¥44.00</span>
+                                    <p class="order-intro">
+                                        <span>所在区服：</span>
+                                        <span>英雄联盟/电信/黑色玫瑰</span>
+                                    </p>
+                                    <p class="order-intro">
+                                        <span>发布者</span>
+                                        <span>帅者无敌</span>
+                                    </p>
+                                    <div class="order-text">
+                                        <span>保证金：80元</span>
+                                        <span>时长：55小时</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="order-details.html" class="is-relative order-box">
+                                <i class="icon-order-index"></i>
+                                <h6 class="title">单双排白金3-钻石5（已有88胜点）</h6>
+                                <div class="is-relative">
+                                    <span class="price">¥44.00</span>
+                                    <p class="order-intro">
+                                        <span>所在区服：</span>
+                                        <span>英雄联盟/电信/黑色玫瑰</span>
+                                    </p>
+                                    <p class="order-intro">
+                                        <span>发布者</span>
+                                        <span>帅者无敌</span>
+                                    </p>
+                                    <div class="order-text">
+                                        <span>保证金：80元</span>
+                                        <span>时长：55小时</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="order-details.html" class="is-relative order-box">
+                                <i class="icon-order-index"></i>
+                                <h6 class="title">单双排白金3-钻石5（已有88胜点）</h6>
+                                <div class="is-relative">
+                                    <span class="price">¥44.00</span>
+                                    <p class="order-intro">
+                                        <span>所在区服：</span>
+                                        <span>英雄联盟/电信/黑色玫瑰</span>
+                                    </p>
+                                    <p class="order-intro">
+                                        <span>发布者</span>
+                                        <span>帅者无敌</span>
+                                    </p>
+                                    <div class="order-text">
+                                        <span>保证金：80元</span>
+                                        <span>时长：55小时</span>
+                                    </div>
                                 </div>
                             </a>
                         </li>
                     </ul>
-                    <!-- 如果需要分页器 -->
-                    <div class="swiper-pagination"></div>
+                    <div>
+                        <a href="product-list.html" class="read-more">查看更多</a>
+                    </div>
                 </div>
-            </div>
-            <div class="product-box">
-                <h5 class="topic">Best Sellers</h5>
-                <ul class="row product-li">
-                    <li v-for="item in productList">
-                        <router-link :to="{name: 'product_details',query:{'urlKey': item.urlKey}}" >
-                            <div class="text-center">
-                                <div class="product-img">
-                                    <img :src="item.productImg" :alt="item.productName">
+                <div class="margin-bottom-10 index-card">
+                    <div class="title text-center">
+                        <span class="line"></span>
+                        <span class="padding-l-r">人气旺铺</span>
+                        <span class="line"></span>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="product-list.html" class="is-relative shop-box">
+                                <i class="shop-img">
+                                    <img src="images/shop-logo.png" alt="">
+                                </i>
+                                <div>
+                                    <h6 class="title">专业代练英雄联盟lol 3天上钻石 10天上王者统统不是梦</h6>
+                                    <p class="price">¥44.00/起</p>
+                                    <div class="intro">
+                                        <i class="icon-shop-fire">
+                                            <img src="assets/images/icon-shop-index.png" alt="">
+                                        </i>
+                                        <span class="volume">成交45笔</span>
+                                    </div>
                                 </div>
-                            </div>
-                            <p class="product-intro">
-                                {{item.shortName}}
-                            </p>
-                            <p class="price-box">
-                                <span class="current-peice">{{item.unit}}{{item.price}}</span>
-                                <span class="bedfor-pecie price-pad">{{item.unit}}{{item.listingPrice}}</span>
-                            </p>
-                        </router-link>
-                    </li>
-                </ul>
-            </div>
-            <a class="product-intro-box" :href="blogInfo.postLink">
-                <div class="img-box">
-                    <img :src="blogInfo.imgUrl" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="product-list.html" class="is-relative shop-box">
+                                <i class="shop-img">
+                                    <img src="assets/images/shop-logo.png" alt="">
+                                </i>
+                                <div>
+                                    <h6 class="title">专业代练英雄联盟lol 3天上钻石 10天上王者统统不是梦</h6>
+                                    <p class="price">¥44.00/起</p>
+                                    <div class="intro">
+                                        <i class="icon-shop-fire">
+                                            <img src="assets/images/icon-shop-index.png" alt="">
+                                        </i>
+                                        <span class="volume">成交45笔</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="product-list.html" class="is-relative shop-box">
+                                <i class="shop-img">
+                                    <img src="assets/images/shop-logo.png" alt="">
+                                </i>
+                                <div>
+                                    <h6 class="title">专业代练英雄联盟lol 3天上钻石 10天上王者统统不是梦</h6>
+                                    <p class="price">¥44.00/起</p>
+                                    <div class="intro">
+                                        <i class="icon-shop-fire">
+                                            <img src="assets/images/icon-shop-index.png" alt="">
+                                        </i>
+                                        <span class="volume">成交45笔</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="product-list.html" class="is-relative shop-box">
+                                <i class="shop-img">
+                                    <img src="assets/images/shop-logo.png" alt="">
+                                </i>
+                                <div>
+                                    <h6 class="title">专业代练英雄联盟lol 3天上钻石 10天上王者统统不是梦</h6>
+                                    <p class="price">¥44.00/起</p>
+                                    <div class="intro">
+                                        <i class="icon-shop-fire">
+                                            <img src="assets/images/icon-shop-index.png" alt="">
+                                        </i>
+                                        <span class="volume">成交45笔</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="product-list.html" class="is-relative shop-box">
+                                <i class="shop-img">
+                                    <img src="assets/images/shop-logo.png" alt="">
+                                </i>
+                                <div>
+                                    <h6 class="title">专业代练英雄联盟lol 3天上钻石 10天上王者统统不是梦</h6>
+                                    <p class="price">¥44.00/起</p>
+                                    <div class="intro">
+                                        <i class="icon-shop-fire">
+                                            <img src="assets/images/icon-shop-index.png" alt="">
+                                        </i>
+                                        <span class="volume">成交45笔</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <div>
+                        <a href="product-list.html" class="read-more">查看更多</a>
+                    </div>
                 </div>
-                <h5 class="topic">
-                    {{blogInfo.postTitle}}
-                </h5>
-                <div class="text" v-html="blogInfo.postContent"></div>
-                <div class="text-right index-link-green">
-                    Read more
-                </div>
-            </a>
-            <div class="card-box">
-                <ul class="row">
-                    <li>
-                        <router-link :to="{name: 'giveaway'}">
-                            <img src="assets/images/index-card-1.png" alt="card-1">
-                            <div class="up-shodow">
-                                Giveaway
-                            </div>
-                        </router-link>
-                    </li>
-                    <li>
-                        <router-link :to="{name:'register',query:{'type': 1}}">
-                            <img src="assets/images/index-card-2.png" alt="card-2">
-                            <div class="up-shodow">
-                                Register Product
-                            </div>
-                        </router-link>
-                    </li>
-                    <li>
-                        <router-link :to="{name: 'influence'}">
-                            <img src="assets/images/index-card-3.png" alt="card-3">
-                            <div class="up-shodow">
-                                Influencer
-                            </div>
-                        </router-link>
-                    </li>
-                    <li>
-                        <router-link :to="{name: 'support'}">
-                            <img src="assets/images/index-card-4.png" alt="card-4">
-                            <div class="up-shodow">
-                                Download
-                            </div>
-                        </router-link>
-                    </li>
-                </ul>
             </div>
-            <foot-set></foot-set>
+
         </div>
     </main-layout>
 </template>
-
 <script>
 
     import MainLayout from '../layouts/main.vue'
-    import FootSet from '../components/foot.vue'
     export default {
         data () {
             return {
-                page: 1,
-                limit: 1,
-                carouselList:[],
-                productList:[],
-                blogInfo: {},
-                searchInput: '',
-                login:Util.getSession('login')
+
             }
         },
         props: {},
         mounted: function () {
-            var self = this;
-            self.getAdvertising();
-            self.getCarousel();
-            self.getBlog();
-            if(self.login){
-                $('.index-nav .search-box').addClass('login');
-            }
-//            $('footer .foot-nav li').eq(0).find('a').addClass('router-link-exact-active router-link-active');
+
         },
         events: {
 
         },
         methods: {
-            getAdvertising:function () {
-                $.getScript("//static.criteo.net/js/ld/ld.js",function(){
-                    window.criteo_q = window.criteo_q || [];
-                    window.criteo_q.push(
-                            { event: "setAccount", account: 44967 },
-                            { event: "setSiteType", type: "m" },
-                            { event: "viewHome" }
-                    );
-                    if(window.localStorage && window.localStorage.hashedEmail){
-                        window.criteo_q.push(
-                                { event: "setHashedEmail", email: window.localStorage.hashedEmail }
-                        );
-                    }
-                });
-            },
-            getCarousel: function(){
-                var self = this;
-                Util.post2(this, {
-                    api: '/index?brand='+ Config.BRAND + '&lang='+ Config.LANG +'&clientType=' + Config.CLIENT_TYPE,
-                    data: {}
-                }).then((res) => {
-                    this.$set(this, 'carouselList', res.data.banners);
-                    this.$set(this, 'productList', res.data.products);
-                    self.initSwiper();
-                });
-            },
-            initSwiper: function(){
-                setTimeout(function(){
-                    new Swiper('.swiper-index',{
-                        loop:true,
-                        autoplay:3000,
-                        pagination : '.swiper-pagination',
-                    })
-                },0)
-            },
-            getBlog: function(){
-                var self = this;
-                Util.post2(this, {
-                    api: '/blog/posts/latest?brand='+ Config.BRAND + '&lang='+ Config.LANG +'&clientType=' + Config.CLIENT_TYPE,
-                    data: {}
-                }).then((res) => {
-                    this.$set(this, 'blogInfo', res.data);
-                });
-            },
-            search: function(){
-                var self = this;
-                if(self.searchInput == ''){
-                    $('.header-nav .search-validation').fadeIn();
-                    setTimeout(function () {
-                        $('.header-nav .search-validation').fadeOut();
-                    },2000)
-                    return false;
-                }
-                self.$router.push({name:'search',query:{'searchTxt': self.searchInput}});
-            },
-            reload: function(){
-                location.reload();
-            }
+
         },
         components: {
             MainLayout,
-            FootSet
         }
     }
 </script>

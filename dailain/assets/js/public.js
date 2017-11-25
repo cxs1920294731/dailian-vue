@@ -137,35 +137,5 @@ $(function () {
 
 //var googleUser = {};
 
-//亚马逊登录
-window.onAmazonLoginReady = function() {
-    amazon.Login.setClientId('amzn1.application-oa2-client.7a45c19ddc7241a38a077aea9e81b574');
-};
-(function(d) {
-    var a = d.createElement('script'); a.type = 'text/javascript';
-    a.async = true; a.id = 'amazon-login-sdk';
-    a.src = 'https://api-cdn.amazon.com/sdk/login1.js';
-    //d.getElementById('amazon-root').appendChild(a);
-    var s1 = d.getElementsByTagName('head')[0];
-    s1.appendChild(a);
-})(document);
-// facebook登录
-window.fbAsyncInit = function() {
-    FB.init({
-        appId      : '149074655701825',
-        cookie     : true,  // enable cookies to allow the server to access// the session
-        xfbml      : true,  // parse social plugins on this page
-        version    : 'v2.8' // use graph api version 2.8
-    });
-    //FB.getLoginStatus(function(response) {
-    //    statusChangeCallback(response);
-    //});
-};
-(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/en_US/sdk.js";
-    fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
-//谷歌验证
+
+
