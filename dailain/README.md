@@ -1,5 +1,5 @@
 # web
-> 泽宝TT
+> 代练
 
 # 本地运行
 > npm run dev
@@ -12,4 +12,8 @@
 
 # 公共函数
 > src/common/util.js
+
+#路由
+>src/router/map.js
+
 
