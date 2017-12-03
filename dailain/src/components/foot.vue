@@ -11,10 +11,10 @@
                     <i class="icon icon-footer icon-list"></i>
                     <p>大厅</p>
                 </a></li>
-                <li><a href="add-order.html">
+                <li><router-link :to="{name:'addOrder'}">
                     <i class="icon icon-footer icon-task"></i>
                     <p>发需求</p>
-                </a></li>
+                </router-link></li>
                 <li><a href="shop.html">
                     <i class="icon icon-footer icon-shop"></i>
                     <p>旺铺</p>

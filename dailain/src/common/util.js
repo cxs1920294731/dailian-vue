@@ -36,12 +36,6 @@ module.exports = {
             self._ajax(vue, options, 'POST', resolve, reject);
         });
     },
-    post2: function(vue, options) {
-        var self = this;
-        return new Promise(function (resolve, reject) {
-            self._ajax2(vue, options, 'POST', resolve, reject);
-        });
-    },
     get: function(vue, options) {
         var self = this;
         return new Promise(function (resolve, reject) {
@@ -50,65 +44,20 @@ module.exports = {
     },
     _ajax: function(vue, options, methodType, resolve, reject) {
         var self = this;
-        self.beforeAjax(vue, options);
         options.data = options.data ? options.data : {};
         reject = reject || function() {};
         $.ajax({
-             //headers: {
-             //    'Content-Type':'application/json',
-             //},
             url: Config.API_URL + options.api,
             type: methodType,
             dataType: 'json',
             contentType: 'application/json',
-            //xhrFields: {
-            //    withCredentials: true
-            //},
-            //crossDomain: true,
             data: JSON.stringify(options.data),
-            // data: methodType === 'POST' ? options.data : options.data,
             success: function(response, status, xhr) {
-                //accessToken失效
-                if(response.code === 40002) {
-                    self.refreshAccessToken();
-                }
+                //accessToken失效application
                 resolve(self.filter(response));
             },
             error: function(response, status) {
-                reject(response, status);
-            },
-            complete: function(response) {
-                self.afterAjax(vue, options);
-            }
-        });
-    },
-    _ajax2: function(vue, options, methodType, resolve, reject) {
-        var self = this;
-        self.beforeAjax(vue, options);
-        options.data = options.data ? options.data : {};
-        reject = reject || function() {};
-        $.ajax({
-            //headers: {
-            //    'Content-Type':'application/json',
-            //},
-            url: Config.API_URL2 + options.api,
-            type: methodType,
-            dataType: 'json',
-            contentType: 'application/json',
-            //xhrFields: {
-            //    withCredentials: true
-            //},
-            //crossDomain: true,
-            data: JSON.stringify(options.data),
-            // data: methodType === 'POST' ? options.data : options.data,
-            success: function(response, status, xhr) {
-                //accessToken失效
-                if(response.code === 40002) {
-                    self.refreshAccessToken2();
-                }
-                resolve(self.filter(response));
-            },
-            error: function(response, status) {
+                console.log('cao1');
                 reject(response, status);
             },
             complete: function(response) {
@@ -139,63 +88,6 @@ module.exports = {
             //return JSON.parse(dataObj.data);
             return dataObj.data;
         }
-    },
-    getAccessToken: function() {
-        var self = this;
-        var token = self.getStoreExp('accessToken');
-        if(token == ''){
-            self.refreshAccessToken();
-        }else {
-            return token;
-        }
-    },
-    getAccessToken2: function() {
-        var self = this;
-        var token = self.getStoreExp('accessToken2');
-        if(token == ''){
-            self.refreshAccessToken2();
-        }else {
-            return token;
-        }
-    },
-    hasAccessToken: function(){
-        var self = this;
-        var token = self.getStoreExp('accessToken');
-        if(token != ''){
-            return token;
-        }else {
-            setTimeout(self.hasAccessToken.bind(self),100);
-        }
-    },
-    refreshAccessToken: function(){
-        var self = this;
-        var obj = {"clientId": "72ab52a28ec54340c5ab4d9e4bd5f56f","clientSecret": "f7c1b83e31255ebb5290a3611244d644","grantType": "pcCredential"}
-        $.ajax({
-            url: Config.API_URL + '/security/oauth/accesstoken?brand='+ Config.BRAND +'&lang=en&accessToken=0&timeStamp=' + self.getTimeStamp() + '&clientType=' + Config.CLIENT_TYPE,
-            type: 'POST',
-            dataType: 'json',
-            contentType: 'application/json',
-            data: JSON.stringify(obj),
-            success: function(response, status, xhr) {
-                self.setStoreExp('accessToken',response.data.accessToken);
-                //location.reload();
-            }
-        });
-    },
-    refreshAccessToken2: function(){
-        var self = this;
-        var obj = {"clientId": "d065027f42844446aadb56eae61b58a4","clientSecret": "cbb268547f884891a121b361ff7c8d10","grantType": "pcCredential"}
-        $.ajax({
-            url: Config.API_URL2 + '/security/oauth/accesstoken?brand='+ Config.BRAND +'&lang=en&accessToken=0&timeStamp=' + self.getTimeStamp() + '&clientType=' + Config.CLIENT_TYPE,
-            type: 'POST',
-            dataType: 'json',
-            contentType: 'application/json',
-            data: JSON.stringify(obj),
-            success: function(response, status, xhr) {
-                self.setStoreExp('accessToken2',response.data.accessToken);
-                //location.reload();
-            }
-        });
     },
     getTimeStamp: function(){
         var self = this;

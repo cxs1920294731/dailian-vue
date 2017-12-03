@@ -99,45 +99,13 @@
         data () {
             return {
                 searchInput: '',
+
                 isLogin:Util.getSession('login')
             }
         },
         props: ['headerTitle','headerType'],
         methods:{
-            showSeach:function (event) {
-                $(event.target).parents('.header-nav').addClass('header-search');
-                $('.header-nav .header-menu').removeClass('show');
-            },
-            showMenu:function () {
-                var html= $('.header-nav .header-menu');
-                if (html.hasClass('show')){
-                    html.removeClass('show');
-                    return;
-                }
-                if (!html.hasClass('show')){
-                    html.addClass('show');
-                    return;
-                }
-            },
-            goPrev: function(){
-                this.$router.go(-1);
-            },
-            search: function(){
-                var self = this;
-                if(self.searchInput == ''){
-                    $('.header-nav .search-validation').fadeIn();
-                    setTimeout(function () {
-                        $('.header-nav .search-validation').fadeOut();
-                    },2000)
-                    return false;
-                }
-                self.$router.push({name:'search',query:{'searchTxt': self.searchInput}});
-            },
-            hide: function(){
-                $('.header-nav').removeClass('header-search');
-                $('.header-nav .header-menu').removeClass('show');
-                $('.header-nav .search-validation').fadeOut();
-            }
+
         },
         components: {}
     }

@@ -22,11 +22,6 @@ var router = new VueRouter({
     }
 });
 router.beforeEach(function (to, from, next) {
-    if (!Util.getStoreExp('accessToken')) {
-        Util.refreshAccessToken();
-    } else if(!Util.getStoreExp('accessToken2')){
-        Util.refreshAccessToken2();
-    }
     next();
 });
 const app = new Vue({

@@ -8,6 +8,20 @@ exports.map = function (config) {
             }
         },
         {
+            path: 'productList',
+            name: 'productList',
+            component: function(resolve){
+                require(['../pages/product_list.vue'], resolve);
+            }
+        },
+        {
+            path: 'addOrder',
+            name: 'addOrder',
+            component: function(resolve){
+                require(['../pages/add_order.vue'], resolve);
+            }
+        },
+        {
             path: 'aboutUs',
             name: 'aboutUs',
             component: function(resolve){
